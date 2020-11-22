@@ -1,0 +1,3 @@
+D:/codes/cpp/mydb3/cmake-build-debug/CMakeFiles/mydb1.dir
+D:/codes/cpp/mydb3/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/codes/cpp/mydb3/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,18 @@
+{
+    "database1": {
+        "table1": {
+            "columns": {
+                "age": [
+                    2
+                ],
+                "id": [
+                    0
+                ],
+                "name": [
+                    1
+                ]
+            },
+            "primaryKey": ""
+        }
+    }
+}
