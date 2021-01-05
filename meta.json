@@ -12,7 +12,8 @@
                     1
                 ]
             },
-            "primaryKey": ""
+            "count": 3,
+            "primaryKey": "id"
         }
     }
 }

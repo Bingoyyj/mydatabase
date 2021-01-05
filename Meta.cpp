@@ -3,17 +3,21 @@
 //
 
 #include "Meta.h"
+#include "StatusCode.h"
 #include <fstream>
 #include <iomanip>
 #include <iostream>
 #include <direct.h>
+#include <stack>
 Meta::Meta() {
     usedDB="";
+    usedTB="";
     load();
 }
 
 Meta::~Meta() {
     usedDB="";
+    usedTB="";
     save();
 }
 
@@ -31,24 +35,36 @@ void Meta::save() {
 
 void Meta::createDB(string name) {
     if(findDB(name)){
-        cout<<"failed"<<endl;
+        cout<<EXIST_DATABASE<<endl;
     }else{
         j[name]={};
         mkdir(("../data/"+name).c_str());
-        cout<<"Succeeded"<<endl;
+        cout<<SUCCESS_CREATE_DATABASE<<endl;
     }
 }
 
 void Meta::dropDB(string name) {
     if(!findDB(name)){
-        cout<<"failed"<<endl;
+        cout<<NOT_FOUND_DATABASE<<endl;
     }else{
-        j.erase(name);
-        if(usedDB==name){
+        string temp=usedDB;
+        usedDB=name;
+        stack<string> s;
+        for (auto& el:j[name].items()){
+            s.push(el.key());
+        }
+        while(!s.empty()){
+            dropTB(s.top());
+            s.pop();
+        }
+        if(temp==name){
             usedDB="";
+        }else{
+            usedDB=temp;
         }
         rmdir(("../data/"+name).c_str());
-        cout<<"Succeeded"<<endl;
+        j.erase(name);
+        cout<<SUCCESS_DROP_DATABASE<<endl;
     }
 }
 
@@ -61,35 +77,54 @@ bool Meta::findDB(string name) {
     return false;
 }
 
-void Meta::useDB(string name) {
+bool Meta::useDB(string name) {
     if(!findDB(name)){
-        cout<<"failed"<<endl;
+        cout<<NOT_FOUND_DATABASE<<endl;
+        return false;
     }else{
         usedDB=name;
+        cout<<USE_DATABASE<<endl;
+        return true;
+    }
+}
+
+void Meta::showDB() {
+    for (auto& el:j.items()) {
+        cout<<el.key()<<endl;
     }
 }
 
 void Meta::createTB(string name) {
     if(usedDB.empty()){
-        cout<<"failed1"<<endl;
+        cout<<NOT_USE_DATABASE<<endl;
     }else if(findTB(name)){
-        cout<<"failed2"<<endl;
+        cout<<NOT_FOUND_TABLE<<endl;
     }else{
-        j[usedDB][name]={{"columns",{}},{"primaryKey",""}};
-//        mkdir(("../data/"+usedDB+"/"+name).c_str());
-        cout<<"Succeeded"<<endl;
+        int n;cin>>n;
+        auto *p=new string[n];
+        for(int i=0;i<n;i++){
+            cin>>p[i];
+        }
+        j[usedDB][name]={{"columns",{}},{"primaryKey",p[0]},{"count",n}};
+        for(int i=0;i<n;i++){
+            j[usedDB][name]["columns"][p[i]]={i};
+        }
+        ofstream f("../data/"+usedDB+"/"+name+'H');
+        f.close();
+        cout<<SUCCESS_CREATE_TABLE<<endl;
     }
 }
 
 void Meta::dropTB(string name) {
     if(usedDB.empty()){
-        cout<<"failed1"<<endl;
+        cout<<NOT_USE_DATABASE<<endl;
     }else if(!findTB(name)){
-        cout<<"failed2"<<endl;
+        cout<<NOT_FOUND_TABLE<<endl;
     }else{
         j[usedDB].erase(name);
-//        rmdir(("../data/"+usedDB+"/"+name).c_str());
-        cout<<"Succeeded"<<endl;
+        remove(("../data/"+usedDB+"/"+name+'H').c_str());
+        remove(("../data/"+usedDB+"/"+name+'C').c_str());
+        cout<<SUCCESS_DROP_TABLE<<endl;
     }
 }
 
@@ -102,44 +137,37 @@ bool Meta::findTB(string name) {
     return false;
 }
 
-void Meta::addCL(string tbName, string clName) {
+bool Meta::useTB(string name) {
     if(usedDB.empty()){
-        cout<<"failed1"<<endl;
-    }else if(!findTB(tbName)){
-        cout<<"failed2"<<endl;
-    }else if(findCL(tbName,clName)){
-        cout<<"failed3"<<endl;
-    }
-    else{
-        j[usedDB][tbName]["columns"][clName]={j[usedDB][tbName]["columns"].size()};
-        cout<<"Succeeded"<<endl;
+        cout<<NOT_USE_DATABASE<<endl;
+        return false;
+    }else if(!findTB(name)){
+        cout<<NOT_FOUND_TABLE<<endl;
+        return false;
+    }else{
+        usedTB=name;
+        cout<<USE_TABLE<<endl;
+        return true;
     }
 }
 
-void Meta::dropCL(string tbName, string clName) {
+void Meta::showTB() {
     if(usedDB.empty()){
-        cout<<"failed1"<<endl;
-    }else if(!findTB(tbName)){
-        cout<<"failed2"<<endl;
-    }else if(!findCL(tbName,clName)){
-        cout<<"failed3"<<endl;
-    }
-    else{
-        j[usedDB][tbName]["columns"].erase(clName);
-        cout<<"Succeeded"<<endl;
-    }
-}
-
-bool Meta::findCL(string tbName,string clname) {
-    for (auto& el:j[usedDB][tbName]["columns"].items()) {
-        cout<<el.key()<<' '<<clname<<endl;
-        if(el.key()==clname){
-//            cout<<el.key()<<endl;
-            return true;
+        cout<<NOT_USE_DATABASE<<endl;
+    }else{
+        for (auto& el:j[usedDB].items()) {
+            cout<<el.key()<<endl;
         }
     }
-    return false;
 }
+
+int Meta::getN() {
+    return j[usedDB][usedTB]["count"];
+}
+
+
+
+
 
 
 

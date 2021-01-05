@@ -10,6 +10,7 @@ class Meta{
 private:
     json j;
     string usedDB;
+    string usedTB;
 public:
     Meta();
     ~Meta();
@@ -18,12 +19,14 @@ public:
     void createDB(string name);
     void dropDB(string name);
     bool findDB(string name);
-    void useDB(string name);
+    bool useDB(string name);
+    void showDB();
+
     void createTB(string name);
     void dropTB(string name);
     bool findTB(string name);
-    void addCL(string tbName,string clName);
-    void dropCL(string tbName,string clName);
-    bool findCL(string tbName,string clname);
+    bool useTB(string name);
+    void showTB();
+    int getN();
 };
 #endif //MYDB1_META_H

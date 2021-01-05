@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="D:/codes/cpp/mydb3/cmake-build-debug"/>
+				<Option working_dir="D:/codes/cpp/mydb4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb3/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="mydb1">
-				<Option output="D:/codes/cpp/mydb3/cmake-build-debug/mydb1.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/codes/cpp/mydb3/cmake-build-debug"/>
+				<Option output="D:/codes/cpp/mydb4/cmake-build-debug/mydb1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/codes/cpp/mydb4/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -32,15 +32,15 @@
 					<Add directory="D:/environment/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb3/cmake-build-debug/Makefile&quot;  VERBOSE=1 mydb1"/>
-					<CompileFile command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 mydb1"/>
+					<CompileFile command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="mydb1/fast">
-				<Option output="D:/codes/cpp/mydb3/cmake-build-debug/mydb1.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/codes/cpp/mydb3/cmake-build-debug"/>
+				<Option output="D:/codes/cpp/mydb4/cmake-build-debug/mydb1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/codes/cpp/mydb4/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,49 +53,73 @@
 					<Add directory="D:/environment/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb3/cmake-build-debug/Makefile&quot;  VERBOSE=1 mydb1/fast"/>
-					<CompileFile command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 mydb1/fast"/>
+					<CompileFile command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="D:/codes/cpp/mydb3/cmake-build-debug"/>
+				<Option working_dir="D:/codes/cpp/mydb4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb3/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="D:/codes/cpp/mydb3/cmake-build-debug"/>
+				<Option working_dir="D:/codes/cpp/mydb4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/environment/mingw64/bin/mingw32-make.exe -f &quot;D:/codes/cpp/mydb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/codes/cpp/mydb3/DataHandler.cpp">
+		<Unit filename="D:/codes/cpp/mydb4/AVL.h">
 			<Option target="mydb1"/>
 		</Unit>
-		<Unit filename="D:/codes/cpp/mydb3/DataHandler.h">
+		<Unit filename="D:/codes/cpp/mydb4/AvlNode.cpp">
 			<Option target="mydb1"/>
 		</Unit>
-		<Unit filename="D:/codes/cpp/mydb3/Meta.cpp">
+		<Unit filename="D:/codes/cpp/mydb4/AvlNode.h">
 			<Option target="mydb1"/>
 		</Unit>
-		<Unit filename="D:/codes/cpp/mydb3/Meta.h">
+		<Unit filename="D:/codes/cpp/mydb4/DataHandler.cpp">
 			<Option target="mydb1"/>
 		</Unit>
-		<Unit filename="D:/codes/cpp/mydb3/main.cpp">
+		<Unit filename="D:/codes/cpp/mydb4/DataHandler.h">
 			<Option target="mydb1"/>
 		</Unit>
-		<Unit filename="D:/codes/cpp/mydb3/CMakeLists.txt">
+		<Unit filename="D:/codes/cpp/mydb4/Handler.cpp">
+			<Option target="mydb1"/>
+		</Unit>
+		<Unit filename="D:/codes/cpp/mydb4/Handler.h">
+			<Option target="mydb1"/>
+		</Unit>
+		<Unit filename="D:/codes/cpp/mydb4/Meta.cpp">
+			<Option target="mydb1"/>
+		</Unit>
+		<Unit filename="D:/codes/cpp/mydb4/Meta.h">
+			<Option target="mydb1"/>
+		</Unit>
+		<Unit filename="D:/codes/cpp/mydb4/Parse.cpp">
+			<Option target="mydb1"/>
+		</Unit>
+		<Unit filename="D:/codes/cpp/mydb4/Parse.h">
+			<Option target="mydb1"/>
+		</Unit>
+		<Unit filename="D:/codes/cpp/mydb4/StatusCode.h">
+			<Option target="mydb1"/>
+		</Unit>
+		<Unit filename="D:/codes/cpp/mydb4/main.cpp">
+			<Option target="mydb1"/>
+		</Unit>
+		<Unit filename="D:/codes/cpp/mydb4/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

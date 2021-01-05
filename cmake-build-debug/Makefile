@@ -58,19 +58,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\Users\Jan\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.7660.37\bin\cmake\win\bin\cmake.exe
+CMAKE_COMMAND = C:\Users\Jan\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.6682.181\bin\cmake\win\bin\cmake.exe
 
 # The command to remove a file.
-RM = C:\Users\Jan\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.7660.37\bin\cmake\win\bin\cmake.exe -E rm -f
+RM = C:\Users\Jan\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.6682.181\bin\cmake\win\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\codes\cpp\mydb3
+CMAKE_SOURCE_DIR = D:\codes\cpp\mydb4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\codes\cpp\mydb3\cmake-build-debug
+CMAKE_BINARY_DIR = D:\codes\cpp\mydb4\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,7 +78,7 @@ CMAKE_BINARY_DIR = D:\codes\cpp\mydb3\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	C:\Users\Jan\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.7660.37\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available."
+	C:\Users\Jan\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.6682.181\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -89,7 +89,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	C:\Users\Jan\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.7660.37\bin\cmake\win\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	C:\Users\Jan\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.6682.181\bin\cmake\win\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -99,9 +99,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\codes\cpp\mydb3\cmake-build-debug\CMakeFiles D:\codes\cpp\mydb3\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\codes\cpp\mydb4\cmake-build-debug\CMakeFiles D:\codes\cpp\mydb4\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\codes\cpp\mydb3\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\codes\cpp\mydb4\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -142,6 +142,33 @@ mydb1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mydb1.dir\build.make CMakeFiles/mydb1.dir/build
 .PHONY : mydb1/fast
 
+AvlNode.obj: AvlNode.cpp.obj
+
+.PHONY : AvlNode.obj
+
+# target to build an object file
+AvlNode.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mydb1.dir\build.make CMakeFiles/mydb1.dir/AvlNode.cpp.obj
+.PHONY : AvlNode.cpp.obj
+
+AvlNode.i: AvlNode.cpp.i
+
+.PHONY : AvlNode.i
+
+# target to preprocess a source file
+AvlNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mydb1.dir\build.make CMakeFiles/mydb1.dir/AvlNode.cpp.i
+.PHONY : AvlNode.cpp.i
+
+AvlNode.s: AvlNode.cpp.s
+
+.PHONY : AvlNode.s
+
+# target to generate assembly for a file
+AvlNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mydb1.dir\build.make CMakeFiles/mydb1.dir/AvlNode.cpp.s
+.PHONY : AvlNode.cpp.s
+
 DataHandler.obj: DataHandler.cpp.obj
 
 .PHONY : DataHandler.obj
@@ -169,6 +196,33 @@ DataHandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mydb1.dir\build.make CMakeFiles/mydb1.dir/DataHandler.cpp.s
 .PHONY : DataHandler.cpp.s
 
+Handler.obj: Handler.cpp.obj
+
+.PHONY : Handler.obj
+
+# target to build an object file
+Handler.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mydb1.dir\build.make CMakeFiles/mydb1.dir/Handler.cpp.obj
+.PHONY : Handler.cpp.obj
+
+Handler.i: Handler.cpp.i
+
+.PHONY : Handler.i
+
+# target to preprocess a source file
+Handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mydb1.dir\build.make CMakeFiles/mydb1.dir/Handler.cpp.i
+.PHONY : Handler.cpp.i
+
+Handler.s: Handler.cpp.s
+
+.PHONY : Handler.s
+
+# target to generate assembly for a file
+Handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mydb1.dir\build.make CMakeFiles/mydb1.dir/Handler.cpp.s
+.PHONY : Handler.cpp.s
+
 Meta.obj: Meta.cpp.obj
 
 .PHONY : Meta.obj
@@ -195,6 +249,33 @@ Meta.s: Meta.cpp.s
 Meta.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mydb1.dir\build.make CMakeFiles/mydb1.dir/Meta.cpp.s
 .PHONY : Meta.cpp.s
+
+Parse.obj: Parse.cpp.obj
+
+.PHONY : Parse.obj
+
+# target to build an object file
+Parse.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mydb1.dir\build.make CMakeFiles/mydb1.dir/Parse.cpp.obj
+.PHONY : Parse.cpp.obj
+
+Parse.i: Parse.cpp.i
+
+.PHONY : Parse.i
+
+# target to preprocess a source file
+Parse.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mydb1.dir\build.make CMakeFiles/mydb1.dir/Parse.cpp.i
+.PHONY : Parse.cpp.i
+
+Parse.s: Parse.cpp.s
+
+.PHONY : Parse.s
+
+# target to generate assembly for a file
+Parse.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mydb1.dir\build.make CMakeFiles/mydb1.dir/Parse.cpp.s
+.PHONY : Parse.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -232,12 +313,21 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... mydb1
+	@echo ... AvlNode.obj
+	@echo ... AvlNode.i
+	@echo ... AvlNode.s
 	@echo ... DataHandler.obj
 	@echo ... DataHandler.i
 	@echo ... DataHandler.s
+	@echo ... Handler.obj
+	@echo ... Handler.i
+	@echo ... Handler.s
 	@echo ... Meta.obj
 	@echo ... Meta.i
 	@echo ... Meta.s
+	@echo ... Parse.obj
+	@echo ... Parse.i
+	@echo ... Parse.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
